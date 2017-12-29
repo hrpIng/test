@@ -1,0 +1,43 @@
+<view class="filter-job-wrapper {{isShow?'act':''}}" bindtouchstart="_getpoint" bindtouchend="_touchmovecloseLayer">
+    <view class='mask' bindtap='_closeLayer'></view>
+    <view class='filter-job-layer'>
+        <scroll-view class='condition-wrapper' scroll-y="true">
+            <view class='pt30'>
+                <view class='search'>
+                    <image src='/static/images/icon/search.png' class='search-icon'></image>
+                    <input class='inp' placeholder='输入工作或者项目关键字查找' placeholder-class="grey-inp"></input>
+                </view>
+            </view>
+            <view class='filter-option'>
+                <view class='filter-title'>工作类型</view>
+                <view class='filter-item'>
+                    <view class='item'>全部</view>
+                    <view class='item'>钢筋工程</view>
+                    <view class='item'>基础工程</view>
+                    <view class='item'>泥水工</view>
+                    <view class='item'>钢筋工程</view>
+                    <view class='item'>基础工程</view>
+                    <view class='item'>泥水工</view>
+                </view>
+            </view>
+            <view class='filter-option'>
+                <view class='filter-title'>所在区域</view>
+                <view class='now-location'>
+                    <image src='/static/images/icon/location.png' class='location-icon'></image>
+                    当前区域：福建，厦门</view>
+                <view class='filter-item'>
+                    <view class='item'>全部</view>
+                    <view class='item'>天津</view>
+                    <view class='item'>上海</view>
+                    <view class='item'>福建</view>
+                    <view class='item'>广东</view>
+                    <view class='item'>江西</view>
+                </view>
+            </view>
+        </scroll-view>
+        <view class='filter-btn'>
+            <view class='cancel btn' catchtap='_cancelEvent'>重置</view>
+            <view class='comfirm btn' catchtap='_confirmEvent'>确认</view>
+        </view>
+    </view>
+</view>

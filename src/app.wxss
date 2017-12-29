@@ -1,0 +1,184 @@
+@import "/components/footerNav/footerNav.wxss";
+
+/**全局样式设置**/
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix {
+    zoom: 1;
+}
+.clear {
+    display: block;
+    clear: both;
+    font-size: 1px;
+    width: 1px;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+.ovh{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 找工作、找班组默认样式 */
+.labour-main {
+    position: relative;
+    padding-top: 80rpx;
+    padding-bottom: 100rpx;
+    overflow: hidden;
+}
+
+.labour-main .worke-btn {
+    position: fixed;
+    right: 40rpx;
+    bottom: 112rpx;
+    width: 60rpx;
+    height: 70rpx;
+    padding: 15rpx 20rpx;
+    font-size: 24rpx;
+    line-height: 35rpx;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #5ca6f2;
+    overflow: hidden;
+    text-align: center;
+    z-index:10;
+}
+
+.labour-main .scroll-wrapper{
+    height: 100%;
+}
+
+.labour-main .location-tip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 10%;
+    text-align: center;
+    font-size: 28rpx;
+    color: #888;
+    line-height: 48rpx;
+}
+
+.labour-main .location-tip .see-btn {
+    margin-top: 40rpx;
+}
+/* 头部tab公共样式 */
+.swiper-tab {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    height: 78rpx;
+    border-bottom: 2rpx solid #e0e0e0;
+    background-color: #fff;
+    z-index: 99;
+}
+
+.swiper-tab .swiper-itme {
+    display: inline-block;
+    width: 42%;
+    height: 78rpx;
+    line-height: 78rpx;
+    font-size: 28rpx;
+    vertical-align: top;
+    border-bottom: 2rpx solid transparent;
+}
+
+.swiper-tab .swiper-itme.filter-icon {
+    background-size: 78rpx 78rpx;
+    width: 16%;
+}
+
+.swiper-tab .swiper-itme .icon-img {
+    height: 78rpx;
+    width: 78rpx;
+}
+
+.swiper-tab .swiper-itme.act {
+    border-bottom-color: #5ca6f2;
+    color: #5ca6f2;
+}
+
+.swiper-tab .swiper-itme .narr-icon{
+    display: inline-block;
+    margin-left: 10rpx;
+    width: 40rpx;
+    height: 40rpx;
+    vertical-align: top;
+    margin-top: 19rpx;
+}
+.swiper-tab .swiper-itme .swiper-type{
+    display: inline-block;
+}
+
+/* 加载公共样式 */
+.scroll-wrapper .loading {
+    padding: 30rpx;
+    background-color: #eee;
+    text-align: center;
+    font-size: 26rpx;
+    color: #999;
+}
+
+/* 详情公共样式 */
+.worke-detail{
+    padding-top: 20rpx;
+    padding-bottom: 93rpx;
+}
+
+.worke-detail .detail-item{
+    display: flex;
+    padding: 15rpx 35rpx;
+    font-size: 26rpx;
+    line-height: 50rpx;
+}
+
+.worke-detail .detail-item.w100{
+    display: block;
+}
+.worke-detail .detail-item.w100 .detail-title{
+    width: 100%;
+}
+.worke-detail .detail-item.w100 .detail{
+    text-align: left;
+}
+.worke-detail .detail-item .detail-title{
+    width: 160rpx;
+    margin-right: 10rpx;
+    color: #000;
+}
+
+.worke-detail .detail-item .detail{
+    flex: 1;
+    font-size: 24rpx;
+    overflow: hidden;
+    text-align: right;
+    color: #666;
+}
+
+.worke-detail .small-blue-text{
+    font-size: 22rpx;
+    color: #5ca6f2;
+}
+.worke-detail .contact-btn{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 93rpx;
+    line-height: 93rpx;
+    color: #fff;
+    font-size: 26rpx;
+    background-color: #5ca6f2;
+    text-align: center;
+}

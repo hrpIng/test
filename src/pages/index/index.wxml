@@ -1,0 +1,69 @@
+<view class="labour-main" style="height: {{swiperHeight}}">
+    <!-- 头部tab标签 -->
+    <view class='swiper-tab'>
+        <view class="swiper-itme {{currentTab==0 ? 'act' : ''}}" data-swiper-tab="0" bindtap="swiperTabTap">
+            附近的工作
+        </view>
+        <view class="swiper-itme {{currentTab==1 ? 'act' : ''}}" data-swiper-tab="1" bindtap="swiperTabTap">
+            最新的工作
+        </view>
+        <view class='swiper-itme filter-icon' bindtap='showFilterLayer'>
+            <image src='/static/images/icon/f-icon2.png' class='icon-img'></image>
+        </view>
+    </view>
+
+    <!-- tab内容 -->
+    <view class='swiper-wrapper'>
+        <!-- 搜索有结果时显示 -->
+        <swiper wx:if="{{isShowLocationTip}}" current="{{currentTab}}" class="swiper-box" bindchange="swiperChange">
+            <swiper-item>
+                <scroll-view class='scroll-wrapper' scroll-y="true" lower-threshold="{{loadingHeight}}" bindscrolltolower="nearbyLoading">
+                    <block wx:for="{{nearbyWorker}}" wx:key="index">
+                        <navigator url='/pages/workeDetail/workeDetail?id={{item.id}}' class='item-wrapper'>
+                            <view class='name ovh'>{{item.name}}</view>
+                            <view class='address ovh'>{{item.address}}</view>
+                            <view class='data'>发布时间：{{item.timer}}</view>
+                            <view class='distance'>{{item.distance}}</view>
+                        </navigator>
+                    </block>
+                    <view wx:if="{{isShow}}" class='loading'>下拉加载更多</view>
+                </scroll-view>
+            </swiper-item>
+            <swiper-item>
+                <scroll-view class='scroll-wrapper' scroll-y="true" lower-threshold="{{loadingHeight}}" bindscrolltolower="newLoading">
+                    <block wx:for="{{newWorker}}" wx:key="index">
+                        <view class='item-wrapper'>
+                            <view class='name ovh'>{{item.name}}</view>
+                            <view class='address ovh'>{{item.address}}</view>
+                            <view class='data'>发布时间：{{item.timer}}</view>
+                            <view class='distance'>{{item.distance}}</view>
+                        </view>
+                    </block>
+                    <view wx:if="{{isShow}}" class='loading'>下拉加载更多</view>
+                </scroll-view>
+            </swiper-item>
+        </swiper>
+
+        <!-- 定位没有打开时显示 -->
+        <view wx:if="{{!isShowLocationTip}}" class='location-tip'>
+            <view>
+                <view>尚未开启定位功能，系统无法推送附近的工作信息，请点击下方图标开启定位功能后查看。</view>
+                <view class='see-btn' bindtap='showLocation'>查看附近工作</view>
+            </view>
+        </view>
+
+        <!-- 搜索无结果时显示 -->
+        <view wx:if="{{!noResult}}" class='location-tip'>
+            <view>暂无信息，请尝试使用其他关键词再次搜索</view>
+        </view>
+    </view>
+
+    <!-- 我要招工按钮 -->
+    <view class='worke-btn'>我要招工</view>
+
+    <filterJobLayer id="filterJobLayer" bind:cancelEvent="_cancelEvent" bind:confirmEvent="_confirmEvent"></filterJobLayer>
+
+    <!-- 底部 -->
+    <footerNav id="footerNav" fData="{{fData}}"></footerNav>
+
+</view>

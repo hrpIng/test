@@ -1,0 +1,119 @@
+.select-layer {
+    position: fixed;
+    left: 0;
+    top: 80rpx;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    visibility: hidden;
+}
+
+.select-layer.act {
+    visibility: visible;
+}
+
+.select-layer .mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.select-layer.act .mask {
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.select-layer .select-item {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+
+.select-layer.act.nosearch .select-item {
+    visibility: visible;
+}
+
+.select-wrapper {
+    padding: 40rpx 3%;
+}
+
+.select-layer.act .select-item {
+    height: 75%;
+    transition: all 0.3s;
+}
+
+.select-layer .select-item .item {
+    display: inline-block;
+    width: 23.33%;
+    margin: 0 3% 15rpx;
+    line-height: 60rpx;
+    color: #fff;
+    background-color: #999;
+    border-radius: 10rpx;
+    font-size: 24rpx;
+    text-align: center;
+    padding: 0 2%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.select-layer .select-item .item.act {
+    background-color: #5ca6f2;
+    color: #fff;
+}
+
+.select-layer.search {
+    z-index: 100;
+    top: 0;
+}
+
+.select-layer.search .search-wrapper {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -100rpx;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+
+.select-layer.act.search .search-wrapper {
+    visibility: visible;
+    top: 0;
+    transition: all 0.3s;
+}
+
+.select-layer .search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20rpx 35rpx;
+}
+
+.select-layer .search-wrapper .inp {
+    flex: 1;
+    padding: 0 15rpx;
+    font-size: 24rpx;
+    color: #333;
+    height: 60rpx;
+    border: 1rpx solid #bbb;
+    border-radius: 10rpx;
+}
+
+.select-layer .search-wrapper .btn {
+    width: 120rpx;
+    margin-left: 20rpx;
+    font-size: 24rpx;
+    line-height: 60rpx;
+    color: #fff;
+    background-color: #999;
+    border: none;
+}

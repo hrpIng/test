@@ -1,0 +1,15 @@
+{
+    "pages": [
+        "pages/team/team",
+        "pages/index/index",
+        "pages/workeDetail/workeDetail",
+        "pages/teamDetail/teamDetail",
+        "pages/logs/logs"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#1b1b20",
+        "navigationBarTitleText": "斐艺劳务小程序",
+        "navigationBarTextStyle": "#fff"
+    }
+}
