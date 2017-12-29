@@ -1,0 +1,156 @@
+.filter-job-wrapper {
+    position: fixed;
+    left: 0%;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    visibility: hidden;
+    transition: all 0.3s;
+    
+}
+.filter-job-wrapper.act{
+    visibility: visible;
+    transition: all 0.3s;
+}
+
+.filter-job-wrapper .mask {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 0.3s;
+}
+.filter-job-wrapper.act .mask{
+    opacity: 1;
+    transition: all 0.3s;
+}
+.filter-job-wrapper .filter-job-layer {
+    position: absolute;
+    left: 100%;
+    width: 66.66%;
+    top: 0;
+    bottom: 0;
+    padding-bottom: 93rpx;
+    overflow: hidden;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+
+.filter-job-wrapper.act .filter-job-layer{
+    left: 33.33%;
+    transition: all 0.3s;
+}
+
+.filter-job-wrapper .filter-btn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 93rpx;
+    line-height: 93rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #999;
+}
+
+.filter-job-wrapper .filter-btn .btn {
+    flex: 1;
+    text-align: center;
+    font-size: 26rpx;
+    color: #fff;
+}
+
+.filter-job-wrapper .filter-btn .btn.comfirm {
+    background-color: #5ca6f2;
+}
+
+.filter-job-wrapper .condition-wrapper {
+    width: 90%;
+    height: 100%;
+    padding: 0 5%;
+}
+
+.filter-job-wrapper .search {
+    display: flex;
+    height: 60rpx;
+    border: 1rpx solid #ddd;
+    border-radius: 10rpx;
+    margin-bottom: 30rpx;
+}
+
+.filter-job-wrapper .search .search-icon {
+    width: 60rpx;
+    height: 60rpx;
+    margin: 0 5rpx;
+}
+
+/* 输入框placeholder的颜色 */
+
+.filter-job-wrapper .search .grey-inp {
+    color: #999;
+    font-size: 24rpx;
+}
+
+.filter-job-wrapper .search .inp {
+    flex: 1;
+    height: 60rpx;
+    font-size: 24rpx;
+    color: #666;
+}
+
+.filter-job-wrapper .filter-option {
+    margin-bottom: 30rpx;
+    padding-top: 10rpx;
+}
+
+.filter-job-wrapper .filter-title {
+    font-size: 28rpx;
+    color: #666;
+    margin-bottom: 25rpx;
+}
+
+.filter-job-wrapper .filter-item {
+    margin-left: -3.33%;
+}
+
+.filter-job-wrapper .filter-item .item {
+    display: inline-block;
+    width: 26%;
+    padding: 0 2%;
+    margin-left: 3.33%;
+    margin-bottom: 10rpx;
+    line-height: 56rpx;
+    font-size: 24rpx;
+    color: #fff;
+    background-color: #999;
+    text-align: center;
+    vertical-align: top;
+    border-radius: 10rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.filter-job-wrapper .filter-item .item.act {
+    background-color: #5ca6f2;
+}
+
+.filter-job-wrapper .now-location {
+    font-size: 26rpx;
+    color: #999;
+    line-height: 40rpx;
+    margin-bottom: 20rpx;
+}
+
+.filter-job-wrapper .now-location .location-icon {
+    width: 36rpx;
+    height: 36rpx;
+    margin-right: 10rpx;
+    vertical-align: top;
+}
+
+.filter-job-wrapper .pt30 {
+    padding-top: 30rpx;
+}

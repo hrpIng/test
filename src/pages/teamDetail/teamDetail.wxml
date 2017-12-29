@@ -1,0 +1,43 @@
+<view class="worke-detail">
+    <view class='detail-item'>
+        <view class='detail-title'>项目名称</view>
+        <view class='detail'>璞尚酒店</view>
+    </view>
+    <view class='detail-item'>
+        <view class='detail-title'>工作地址</view>
+        <view class='detail'>
+            福建省厦门市湖里区五缘湾道100号
+            <view class='small-blue-text'>查看位置</view>
+        </view>
+    </view>
+    <view class='detail-item'>
+        <view class='detail-title'>招工类型</view>
+        <view class='detail'>泥水工</view>
+    </view>
+    <view class='detail-item'>
+        <view class='detail-title'>招工数量</view>
+        <view class='detail'>10</view>
+    </view>
+    <view class='detail-item'>
+        <view class='detail-title'>工作周期</view>
+        <view class='detail'>即日起至2017年12月31日</view>
+    </view>
+    <view class='detail-item'>
+        <view class='detail-title'>薪资待遇</view>
+        <view class='detail'>100元/人/天</view>
+    </view>
+    <view class='detail-item w100'>
+        <view class='detail-title'>其他说明</view>
+        <view class='detail'>要求经验丰富，行业工作经验超过5年以上</view>
+    </view>
+    <view class='detail-item'>
+        <view class='detail-title'>发布时间</view>
+        <view class='detail'>2017年12月5日 12:00:00</view>
+    </view>
+    <view class='detail-item'>
+        <view class='detail'><view class='small-blue-text'>更多水泥工招聘信息</view></view>
+    </view>
+
+    <view class='contact-btn'>联系用人单位</view>
+
+</view>

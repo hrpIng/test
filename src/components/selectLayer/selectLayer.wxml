@@ -1,0 +1,16 @@
+<view class="select-layer {{isShow?'act':''}} {{isShowSearch?'search':'nosearch'}}" bindtouchstart='_getpoint' bindtouchend='_touchmovecloseLayer'>
+    <view class='mask' bindtap='_closeLayer'></view>
+    <scroll-view class='select-item' scroll-y="true">
+        <view class='select-wrapper'>
+            <block wx:for="{{sData}}" wx:key="{{index}}">
+                <view class='item' bindtap='_selectItem' data-name="{{item}}">{{item}}</view>
+            </block>
+        </view>
+    </scroll-view>
+    <view class='search-wrapper'>
+        <view class='search-box'>
+        <input placeholder='请输入姓名查找' class='inp'></input>
+        <button class='btn'>取消</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,67 @@
+<view class="labour-main" style="height: {{swiperHeight}}">
+    <!-- 条件筛选 -->
+    <view class='swiper-tab'>
+        <view class="swiper-itme" catchtap='_selectWorkeType'>
+            <view class='swiper-type'>{{typename}}</view>
+            <image src='/static/images/icon/down.png' class='narr-icon'></image>
+        </view>
+        <view class="swiper-itme" catchtap='_selectWorkeArea'>
+            <view class='swiper-type'>{{areaname}}</view>
+            <image src='/static/images/icon/down.png' class='narr-icon'></image>
+        </view>
+        <view class='swiper-itme filter-icon' catchtap='_searchSelect'>
+            <image src='/static/images/icon/search.png' class='icon-img'></image>
+        </view>
+    </view>
+
+    <!-- 搜索弹出框 -->
+    <!-- <view class="search-layer {{isShowSearch?'act':''}}" bindtouchstart='_getpoint' bindtouchend='_touchmovecloseLayer'>
+        <view class='mask' bindtap='_closeLayer'></view>
+        <view class='search-wrapper'>
+            <input placeholder='请输入姓名查找' class='inp'></input>
+            <button class='btn'>取消</button>
+        </view>
+    </view> -->
+
+    <view class='team-main'>
+        <!-- 有数据时 一般默认显示 -->
+        <scroll-view class='scroll-wrapper' scroll-y="true" lower-threshold="{{loadingHeight}}" bindscrolltolower="nearbyLoading">
+            <block wx:for="{{nearbyWorker}}" wx:key="index">
+                <navigator url='/pages/teamDetail/teamDetail?id={{item.id}}' class='item-wrapper'>
+                    <image src="{{item.avatar}}" class='avatar'></image>
+                    <view class='detail'>
+                        <view class='userinfo'><text>{{item.name}}</text><text>{{item.address}}</text></view>
+                        <view class='data'>{{item.synopsis}}</view>
+                        <view class='distance'>{{item.distance}}</view>
+                    </view>
+                </navigator>
+            </block>
+            <view wx:if="{{isShow}}" class='loading'>下拉加载更多</view>
+        </scroll-view>
+
+        <!-- 定位没有打开时显示 -->
+        <view wx:if="{{!isShowLocationTip}}" class='location-tip'>
+            <view>
+                <view>尚未开启定位功能，系统无法推送附近的工作信息，请点击下方图标开启定位功能后查看。</view>
+                <view class='see-btn' bindtap='showLocation'>查看附近工作</view>
+            </view>
+        </view>
+
+        <!-- 搜索无结果时显示 -->
+        <view wx:if="{{!noResult}}" class='location-tip'>
+            <view>暂无信息，请尝试使用其他关键词再次搜索</view>
+        </view>
+    </view>
+
+    <!-- 招工和去弹出框 -->
+    <selectLayer id="selectLayer" sData="{{sData}}" isSearch="{{isShowSearch}}" bind:selectItem="_selectItem"></selectLayer>  
+
+    
+
+    <!-- 我要招工按钮 -->
+    <view class='worke-btn'>班组入驻</view>
+
+    <!-- 底部 -->
+    <footerNav id="footerNav" fData="{{fData}}"></footerNav>
+
+</view>
