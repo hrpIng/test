@@ -1,0 +1,11 @@
+<view class="my-main">
+    <view class="my-info-wrapper clearfix">
+        <image src="{{userInfo.avatarUrl}}" class="avatar"></image>
+        <view class="name">{{userInfo.nickName}}</view>
+    </view>
+    <view class="my-list">
+        <navigator url='/pages/workList/workList?id={{item.id}}' class="my-item">招工信息</navigator>
+        <navigator url='/pages/teamInfo/teamInfo?id={{item.id}}' class="my-item">班组信息</navigator>
+        <view class="my-item" catchtap='callKefu'>联系客服</view>
+    </view>
+</view>

@@ -1,9 +1,4 @@
 @import "/components/filterJobLayer/filterJobLayer.wxss";
-
-page {
-    overflow: hidden;
-}
-
 .swiper-wrapper {
     height: 100%;
 }

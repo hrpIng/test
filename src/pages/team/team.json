@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "有人劳务",
-  "usingComponents": {
-        "footerNav": "/components/footerNav/footerNav",
-        "selectLayer": "/components/selectLayer/selectLayer"
-    }
-}

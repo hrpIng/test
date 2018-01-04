@@ -1,0 +1,35 @@
+<view class="worke-detail" wx:if="{{true}}">
+    <view class='detail-item'>
+        <view class='detail-title'>联系人</view>
+        <view class='detail'>小A</view>
+    </view>
+    <view class='detail-item'>
+        <view class='detail-title'>所在位置</view>
+        <view class='detail'>福建省厦门市湖里区</view>
+    </view>
+    <view class='detail-item'>
+        <view class='detail-title'>班组类型</view>
+        <view class='detail'>泥水工，油漆工，砖瓦工，工程建造，土木工程</view>
+    </view>
+    <view class='detail-item'>
+        <view class='detail-title'>班组人数</view>
+        <view class='detail'>10</view>
+    </view>
+    <view class='detail-item'>
+        <view class='detail-title'>薪资待遇</view>
+        <view class='detail'>100元/人/天</view>
+    </view>
+    <view class='detail-item w100'>
+        <view class='detail-title'>其他说明</view>
+        <view class='detail'>要求经验丰富，行业工作经验超过5年以上</view>
+    </view>
+</view>
+
+<view class="no-team-info-wrapper"  wx:if="{{false}}">
+    <!-- 搜索无结果时显示 -->
+    <view class='location-tip'>
+        <view>暂无班组信息</view>
+    </view>
+    <!-- 班组入驻按钮 -->
+    <view class='worke-btn'>班组入驻</view>
+</view>

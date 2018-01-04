@@ -1,8 +1,0 @@
-<view class='footer'>
-    <block wx:for="{{fData}}" wx:key="{{index}}">
-        <navigator url="{{item.url}}" class='footer-item'>
-            <image src="{{item.imageIcon}}" class='img'></image>
-            <view>{{item.text}}</view>
-        </navigator>
-    </block>
-</view>

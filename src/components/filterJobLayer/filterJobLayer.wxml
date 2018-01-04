@@ -1,5 +1,5 @@
 <view class="filter-job-wrapper {{isShow?'act':''}}" bindtouchstart="_getpoint" bindtouchend="_touchmovecloseLayer">
-    <view class='mask' bindtap='_closeLayer'></view>
+    <view class='mask' catchtap='_closeLayer'></view>
     <view class='filter-job-layer'>
         <scroll-view class='condition-wrapper' scroll-y="true">
             <view class='pt30'>

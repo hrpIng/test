@@ -1,9 +1,5 @@
 /* pages/team/team.wxss */
 @import "/components/selectLayer/selectLayer.wxss";
-
-page{
-    overflow: hidden;
-}
 .condition-filter{
     position: fixed;
     left: 0;

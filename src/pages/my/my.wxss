@@ -1,0 +1,47 @@
+.my-main .my-info-wrapper {
+    padding: 35rpx 35rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-main .my-info-wrapper .avatar {
+    width: 100rpx;
+    height: 100rpx;
+    margin-right: 30rpx;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.my-main .my-info-wrapper .name {
+    flex: 1;
+    font-size: 28rpx;
+    color: #333;
+}
+
+.my-main .my-list {
+    margin-top: 20rpx;
+    border-top: 1px solid #eee;
+}
+
+.my-main .my-list .my-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 25rpx 70rpx 25rpx 25rpx;
+    border-bottom: 1px solid #eee;
+    font-size: 28rpx;
+    color: #666;
+    line-height: 50rpx;
+}
+.my-main .my-list .my-item::after{
+    content: "";
+    position: absolute;
+    right: 35rpx;
+    top: 40rpx;
+    height: 20rpx;
+    width: 20rpx;
+    border-top: 1rpx solid #999;
+    border-right: 1rpx solid #999;
+    transform: rotate(45deg);
+}
