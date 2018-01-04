@@ -1,0 +1,48 @@
+<view class="main-wrapper" wx:if="{{true}}">
+    <!-- 第一屏 -->
+    <view class="main-swiper-item {{footerCurrentTab==0 ? 'act' : ''}}">
+        <include src="/pages/index/index.wxml" />
+    </view>
+
+    <!-- 第二屏 -->
+    <view class="main-swiper-item {{footerCurrentTab==1 ? 'act' : ''}}">
+        <include src="/pages/team/team.wxml" />
+    </view>
+
+    <!-- 第三屏 -->
+    <view class="main-swiper-item {{footerCurrentTab==2 ? 'act' : ''}}">
+        <include src="/pages/my/my.wxml" />
+    </view>
+</view>
+
+<view class='footer-tab'>
+    <view class="footer-item {{footerCurrentTab==0 ? 'act' : ''}}" data-swiper-tab="0" catchtap="footerswiperTabTap">
+        <image src="/static/images/icon/f-icon1{{footerCurrentTab==0 ? '-h' : ''}}.png" class='img'></image>
+        <view>找工作</view>
+    </view>
+    <view class="footer-item {{footerCurrentTab==1 ? 'act' : ''}}" data-swiper-tab="1" catchtap="footerswiperTabTap">
+        <image src="/static/images/icon/f-icon3{{footerCurrentTab==1 ? '-h' : ''}}.png" class='img'></image>
+        <view>找班组</view>
+    </view>
+    <view class="footer-item {{footerCurrentTab==2 ? 'act' : ''}}" data-swiper-tab="2" catchtap="footerswiperTabTap">
+        <image src="/static/images/icon/f-icon4{{footerCurrentTab==2 ? '-h' : ''}}.png" class='img'></image>
+        <view>我的</view>
+    </view>
+</view>
+
+<view class="main-wrapper"  wx:if="{{false}}">
+
+    <!-- 定位没有打开时显示 -->
+    <view wx:if="{{!isShowLocationTip}}" class='location-tip'>
+        <view>
+            <view>尚未开启定位功能，系统无法推送附近的工作信息，请点击下方图标开启定位功能后查看。</view>
+            <view class='see-btn' bindtap='showLocation'>查看附近工作</view>
+        </view>
+    </view>
+
+    <!-- 搜索无结果时显示 -->
+    <view wx:if="{{!noResult}}" class='location-tip'>
+        <view>暂无信息，请尝试使用其他关键词再次搜索</view>
+    </view>
+
+</view>

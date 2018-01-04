@@ -1,10 +1,11 @@
 {
     "pages": [
-        "pages/team/team",
-        "pages/index/index",
+        "pages/indexWrapper/indexWrapper",
+        "pages/workList/workList",
         "pages/workeDetail/workeDetail",
         "pages/teamDetail/teamDetail",
-        "pages/logs/logs"
+        "pages/teamInfo/teamInfo"
+        
     ],
     "window": {
         "backgroundTextStyle": "light",

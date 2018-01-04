@@ -1,0 +1,30 @@
+/* pages/workList/workList.wxss */
+page,.swiper-wrapper,.scroll-wrapper{
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.scroll-wrapper .item-wrapper {
+    position: relative;
+    padding: 25rpx 35rpx;
+    border-bottom: 1rpx solid #bbb;
+    line-height: 44rpx;
+    font-size: 26rpx;
+    color: #666;
+}
+
+.scroll-wrapper .name {
+    width: 83%;
+    font-size: 30rpx;
+    padding-bottom: 5rpx;
+}
+
+.scroll-wrapper .data {
+    font-size: 24rpx;
+    color: #999;
+}
+
+.no-team-info-wrapper{
+    height: 100%;
+}

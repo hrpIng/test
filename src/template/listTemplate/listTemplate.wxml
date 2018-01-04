@@ -1,0 +1,8 @@
+<template name="listData">
+    <navigator url='/pages/workeDetail/workeDetail?id={{item.id}}' class='item-wrapper'>
+        <view class='name ovh'>{{item.name}}</view>
+        <view class='address ovh'>{{item.address}}</view>
+        <view class='data'>发布时间：{{item.timer}}</view>
+        <view class='distance' wx:if="{{isShowDistance}}">{{item.distance}}</view>
+    </navigator>
+</template>

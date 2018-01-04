@@ -1,5 +1,3 @@
-@import "/components/footerNav/footerNav.wxss";
-
 /**全局样式设置**/
 .clearfix:after {
     visibility: hidden;
@@ -30,12 +28,17 @@
 /* 找工作、找班组默认样式 */
 .labour-main {
     position: relative;
+    height: 100%;
     padding-top: 80rpx;
-    padding-bottom: 100rpx;
+    box-sizing: border-box;
     overflow: hidden;
 }
 
-.labour-main .worke-btn {
+.labour-main .swiper-wrapper{
+    height: 100%;
+}
+
+.worke-btn {
     position: fixed;
     right: 40rpx;
     bottom: 112rpx;
@@ -56,7 +59,7 @@
     height: 100%;
 }
 
-.labour-main .location-tip {
+.location-tip {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +71,7 @@
     line-height: 48rpx;
 }
 
-.labour-main .location-tip .see-btn {
+.location-tip .see-btn {
     margin-top: 40rpx;
 }
 /* 头部tab公共样式 */

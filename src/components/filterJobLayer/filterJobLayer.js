@@ -27,10 +27,6 @@ Component({
             //触发确定回调
             this.triggerEvent("confirmEvent");
         },
-        // 点击遮罩层关闭弹层
-        _closeLayer:function(){
-            this.layerStatus()
-        },
         _getpoint:function(e){
             this.setData({
                 point:{

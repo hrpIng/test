@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "有人劳务",
+    "usingComponents": {
+        "filterJobLayer": "/components/filterJobLayer/filterJobLayer",
+        "selectLayer": "/components/selectLayer/selectLayer"
+    }
+}

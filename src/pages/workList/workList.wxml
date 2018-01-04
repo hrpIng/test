@@ -1,0 +1,22 @@
+
+<import src="/template/listTemplate/listTemplate"/>
+
+<view class='swiper-wrapper' wx:if="{{true}}">
+    <scroll-view class='scroll-wrapper' scroll-y="true" lower-threshold="{{loadingHeight}}" bindscrolltolower="workerListLoading">
+        <block wx:for="{{workList}}" wx:key="index">
+             <template is="listData" data="{{item:workList[index],isShowDistance:false}}"/> 
+        </block>
+        <view wx:if="{{isShow}}" class='loading'>下拉加载更多</view>
+    </scroll-view>
+</view>
+
+
+<view class="no-team-info-wrapper"  wx:if="{{false}}">
+    <!-- 搜索无结果时显示 -->
+    <view class='location-tip'>
+        <view>暂无班组信息</view>
+    </view>
+</view>
+
+<!-- 我要招工按钮 -->
+<view class='worke-btn'>我要招工</view>
